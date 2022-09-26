@@ -1,10 +1,10 @@
-import CoinClass as c
+import CoinClass as c     # name of file, not name of class
 
 
 # The main function.
 def main():
        # Create an object from the Coin class.
-       my_coin = c.Coin()   # this creates an instance called 'my_coin' of the class 'Coin()'
+       my_coin = c.Coin()   # this creates an instance called 'my_coin' of the class 'Coin()'   #c. is just an alias
 
        # Display the side of the coin that is facing up.
        print('This side is up:', my_coin.get_sideup())    # notice you do not have to supply the argument/parameter
@@ -13,6 +13,7 @@ def main():
        print('I am going to toss the coin ten times:')
        for count in range(10):
            my_coin.toss()
+           my_coin.sideup = "Heads"                         #hack to hard code heads. Adding underscores in class file prevents this from being able to happen
            
            # Display the side of the coin that is facing up.
            print('This side is up:', my_coin.get_sideup())
